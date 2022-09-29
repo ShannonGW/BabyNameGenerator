@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react"; //named function we need to use {} and correct name
 
-function FirstName() {
+const UseFirstName = () => {
+  const [firstName, setFirstName] = useState("");
+
+  const handleClick = () => {
+    if (firstName === "") {
+      setFirstName("Rose");
+    } else {
+      setFirstName("Clover");
+    }
+  };
   return (
     <>
-      <button>Click for Random Name</button>
+      <h1>{firstName}</h1>
+      <button onClick={handleClick}>Click for Random First Name</button>
     </>
   );
-}
+};
 
-export default FirstName;
+export default UseFirstName;
