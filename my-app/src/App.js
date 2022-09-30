@@ -1,16 +1,16 @@
 import "./App.css";
+import FirstName from "./components/FirstName";
+// import MiddleName from "./components/MiddleName";
+import React, { useState } from "react";
 import MiddleName from "./components/MiddleName";
-import UseFirstName from "./components/FirstName";
-import { data } from "./data";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Gender Neutral Baby Name Generator </h1> First Name
-      <UseFirstName />
-      Middle Name
+    <>
+      <h1>Gender Neutral Baby Name Generator </h1>
+      <FirstName />
       <MiddleName />
-    </div>
+    </>
   );
 }
-
 export default App;

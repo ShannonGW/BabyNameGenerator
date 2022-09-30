@@ -1,31 +1,30 @@
-import React, { useState } from "react"; //named function we need to use {} and correct name
-import { data } from "../data";
+import { useState } from "react";
+import React from "react";
 
-const UseFirstName = () => {
-  const [firstName, setFirstName] = useState(data);
+export default function FirstName() {
+  const [firstName, setFirstName] = useState([]);
 
-  //   const handleClick = () => {
-  //     // if (firstName === "") {
-  //     //   setFirstName("Rose");
-  //     // } else {
-  //     //   setFirstName("Clover");
-  //     // }
-  //     // let newFirstName = firstName.filter((firstName) => firstName.id !== id);
-  //     // setFirstName(firstName);
-  //   };
+  const firstNames = [
+    "Alex",
+    "James",
+    "Tatum",
+    "Drew",
+    "Taylor",
+    "Jordan",
+    "Kennedy",
+    "Parker",
+    "Avery",
+    "Emerson",
+  ];
+
+  const handleClickFirstName = () => {
+    setFirstName(firstNames[Math.floor(Math.random() * firstNames.length)]);
+  };
+
   return (
-    <>
-      {data.map((name1) => {
-        const { id, name } = name1;
-        return (
-          <div key={id}>
-            <h4>{name}</h4>
-          </div>
-        );
-      })}
-      {/* <button onClick={handleClick}>Click for Random First Name</button> */}
-    </>
+    <div>
+      <h2>{firstName}</h2>
+      <button onClick={handleClickFirstName}>First Name</button>
+    </div>
   );
-};
-
-export default UseFirstName;
+}

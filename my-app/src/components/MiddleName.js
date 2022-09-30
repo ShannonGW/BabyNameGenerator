@@ -1,22 +1,30 @@
-import React, { useState } from "react"; //named function we need to use {} and correct name
-import FirstName from "./FirstName";
+import { useState } from "react";
+import React from "react";
 
-const UseMiddleName = () => {
-  const [middleName, setMiddleName] = useState("");
+export default function MiddleName() {
+  const [middleName, setMiddleName] = useState([]);
 
-  const handleClick = () => {
-    if (middleName === FirstName) {
-      setMiddleName("Rose");
-    } else {
-      setMiddleName("Clover");
-    }
+  const middleNames = [
+    "Shannon",
+    "Max",
+    "Billy",
+    "Carter",
+    "Dana",
+    "Kim",
+    "Carter",
+    "Charlie",
+    "Sumner",
+    "Andi",
+  ];
+
+  const handleClickMiddleName = () => {
+    setMiddleName(middleNames[Math.floor(Math.random() * middleNames.length)]);
   };
-  return (
-    <>
-      <h1>{middleName}</h1>
-      <button onClick={handleClick}>Click for Random Middle Name</button>
-    </>
-  );
-};
 
-export default UseMiddleName;
+  return (
+    <div>
+      <h2>{middleName}</h2>
+      <button onClick={handleClickMiddleName}>Middle Name</button>
+    </div>
+  );
+}
