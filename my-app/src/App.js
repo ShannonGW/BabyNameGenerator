@@ -1,7 +1,7 @@
 import "./App.css";
-import FirstName from "./components/FirstName";
-// import MiddleName from "./components/MiddleName";
 import React, { useState } from "react";
+
+import FirstName from "./components/FirstName";
 import MiddleName from "./components/MiddleName";
 
 function App() {
