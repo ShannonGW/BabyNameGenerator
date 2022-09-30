@@ -11,7 +11,7 @@ function App() {
         Gender Neutral <br />
         Baby Name Generator{" "}
       </h1>
-      <hr></hr>
+      <hr />
       <FirstName />
       <MiddleName />
     </>
