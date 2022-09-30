@@ -3,9 +3,10 @@
 }
 
 body {
-  background-color: #edebde;
+  background-color: #e2e4df;
 }
 
 h1 {
+  padding-top: 0 px;
   font-size: xx-large;
 }

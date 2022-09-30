@@ -15,6 +15,9 @@ export default function FirstName() {
     "Parker",
     "Avery",
     "Emerson",
+    "Blake",
+    "Cameron",
+    "Austin",
   ];
 
   const handleClickFirstName = () => {
@@ -23,8 +26,13 @@ export default function FirstName() {
 
   return (
     <div>
-      <h2>{firstName}</h2>
-      <button onClick={handleClickFirstName}>First Name</button>
+      <h2 className="display-5">{firstName}</h2>
+      <button
+        className="btn btn-secondary btn-lg mt-3 mb-5"
+        onClick={handleClickFirstName}
+      >
+        First Name
+      </button>
     </div>
   );
 }

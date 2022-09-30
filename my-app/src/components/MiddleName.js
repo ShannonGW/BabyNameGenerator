@@ -15,6 +15,9 @@ export default function MiddleName() {
     "Charlie",
     "Sumner",
     "Andi",
+    "Kyle",
+    "Logan",
+    "Ezra",
   ];
 
   const handleClickMiddleName = () => {
@@ -23,8 +26,13 @@ export default function MiddleName() {
 
   return (
     <div>
-      <h2>{middleName}</h2>
-      <button onClick={handleClickMiddleName}>Middle Name</button>
+      <h2 className="display-5">{middleName}</h2>
+      <button
+        className="btn btn-secondary btn-lg  mt-3 "
+        onClick={handleClickMiddleName}
+      >
+        Middle Name
+      </button>
     </div>
   );
 }
